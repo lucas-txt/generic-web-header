@@ -1,0 +1,126 @@
+:root {
+  --fundo-padrao: rgba(0, 0, 0, 0.3);
+  --padrao: rgb(20, 20, 20);
+  --fundo-padrao-reverso: rgb(200, 200, 200);
+  --padrao-reverso: rgb(190, 190, 190);
+  --cor: purple;
+  --sombra: none;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  outline: none;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(34, 34, 34);
+}
+
+main {
+  height: 93%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(50, 1fr);
+  grid-template-columns: repeat(50, 1fr);
+}
+main [class^=gadget] {
+  background-color: var(--fundo-padrao);
+  border-radius: 15px;
+  box-shadow: var(--sombra);
+}
+main .gadget-1 {
+  grid-area: 2/2/5/47;
+  padding: 0px 3em;
+  color: var(--fundo-padrao-reverso);
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .gadget-1 > div {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .gadget-1 #options {
+  justify-content: right;
+  gap: 4em;
+}
+main .gadget-1 [class^=option] {
+  height: 1.2em;
+  width: 60px;
+  text-align: center;
+  transition-duration: 0.9s;
+  animation-timing-function: ease-in;
+}
+main .gadget-1 [class^=option]:hover {
+  color: var(--padrao);
+}
+main .gadget-1 [class^=option] p {
+  position: absolute;
+}
+main .gadget-1 [class^=option] > .efeito-gdt1 {
+  height: 1.2em;
+  width: 0em;
+  background-color: var(--cor);
+  border-radius: 3px;
+  position: absolute;
+  animation-timing-function: ease-in;
+  transition-duration: 0.5s;
+}
+main .gadget-1 .option-1:hover > .efeito-gdt1 {
+  width: 2.8em;
+}
+main .gadget-1 .option-2:hover > .efeito-gdt1 {
+  width: 3em;
+}
+main .gadget-1 .option-3:hover > .efeito-gdt1 {
+  width: 3.3em;
+}
+main .gadget-1 .option-4:hover > .efeito-gdt1 {
+  width: 3.1em;
+}
+main .gadget-1 .option-5:hover > .efeito-gdt1 {
+  width: 3.9em;
+}
+main .gadget-1 #search-box {
+  height: 2.2em;
+  width: 25em;
+  padding-left: 1em;
+  background-color: var(--fundo-padrao-reverso);
+  color: var(--padrao);
+  font-weight: 600;
+  border-radius: 10px;
+  border: 4px solid var(--cor);
+  filter: grayscale(40%);
+}
+main .gadget-1 #search-box:focus {
+  filter: grayscale(0%) saturate(110%);
+}
+main .gadget-1 #search-outline, main .gadget-1 #ellipse-outline {
+  position: relative;
+  top: -10%;
+  transition-duration: 0.15s;
+}
+main .gadget-1 #search-outline {
+  font-size: 1.2em;
+  transform: translateX(-140%);
+}
+main .gadget-1 #search-outline:hover {
+  color: var(--cor);
+}
+main .gadget-1 #ellipse-outline {
+  font-size: 2.1em;
+}/*# sourceMappingURL=main.css.map */
