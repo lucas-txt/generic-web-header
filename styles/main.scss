@@ -26,15 +26,13 @@ main {
     grid-template-rows: repeat(50, 1fr);
     grid-template-columns: repeat(50, 1fr);
 
-    [class^="gadget"] {
+    .header {
+        grid-area: 2/2 / 5/47;
+        padding: 0px 3em;
+
         background-color: $fundo-padrao;
         border-radius: 15px;
         box-shadow: $sombra;
-    }
-
-    .gadget-1 {
-        grid-area: 2/2 / 5/47;
-        padding: 0px 3em;
         
         color: $fundo-padrao-reverso;
         
@@ -63,7 +61,7 @@ main {
                 position: absolute; 
             }
 
-            >.efeito-gdt1 {
+            >.efeito {
                 @include boxSize(1.2em, 0em);
                 background-color: $cor;
         
@@ -76,11 +74,11 @@ main {
             }
         }
 
-        .option-1:hover > .efeito-gdt1 {width: 2.8em;}
-        .option-2:hover > .efeito-gdt1 {width: 3.0em;}
-        .option-3:hover > .efeito-gdt1 {width: 3.3em;}
-        .option-4:hover > .efeito-gdt1 {width: 3.1em;}
-        .option-5:hover > .efeito-gdt1 {width: 3.9em;}
+        .option-1:hover > .efeito {width: 4em;}
+        .option-2:hover > .efeito {width: 3.0em;}
+        .option-3:hover > .efeito {width: 3.6em;}
+        .option-4:hover > .efeito {width: 3.1em;}
+        .option-5:hover > .efeito {width: 4em;}
 
         #search-box {
             @include boxSize(2.2em, 25em);
